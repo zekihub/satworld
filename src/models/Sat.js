@@ -10,25 +10,16 @@ export default function Sat(props) {
   const group = useRef()
   const { nodes, materials } = useGLTF('/gokturk0.4.gltf')
 
-  const factor = 0.25 + Math.random();
-
+   const scn = useRef()
   useFrame((state, delta) => {
-    //groupRef.current.rotation.y -= 0.07
-    //groupRef.current.position.x -= 0.02
-    //console.log(state, delta)
-    //groupRef.current.position.x -= delta
-
-
-    //group.current.rotation.y += Math.sin((delta * factor) / 2) * Math.cos((delta * factor) / 2) * 1.5
-    //mixer.update(delta * speed)
-    group.current.rotation.y +=  0.05
-
+    group.current.rotation.y += 0.004
   })
   console.log("groupRef.current on sat:", group.current)
-
+  console.log("scneeeeee:", scn)
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.03, 0.03, 0.03]} >
-      <scene name="Scene" position={[100, 0, 0]}>
+    <group ref={group} {...props} dispose={null} scale={[0.03, 0.03, 0.03]} /* quaternion={[0.7, 0, 0, 0.5]} */ quaternion={props.quaternion}>
+      <scene ref={scn} name="Scene" /* position={[70, 0, 0]} */ position={props.scenePosition} rotation={[10, 10, 90]}>
+ 
         <mesh material={materials.Material} geometry={nodes.Cube.geometry} position={[0.05, -0.01, -0.03]} />
         <mesh material={materials['Material.025']} geometry={nodes.Cylinder.geometry} position={[0.05, -0.61, -0.01]} />
         <mesh
