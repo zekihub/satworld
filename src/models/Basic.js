@@ -13,7 +13,7 @@ function Box(props) {
     })
 console.log("mesh",mesh)
     return (
-        <group ref={group} quaternion={[0.3, 0.1, 0.1, 1]} >
+        <group ref={group} /* quaternion={[0.3, 0.1, 0.1, 1]} */ quaternion={[0.11827949918886817, -0.8728936763273911, -0.26179762468552814, 0.3943711368854184]}>
             <group position={[0, 3, 0]}>
             <mesh
                 //position={[0, 0, 0]}

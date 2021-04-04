@@ -32,7 +32,7 @@ export default function Earth2(props) {
 
     return (
         <group ref={group} {...props} dispose={null} >
-            <mesh material={materials['Earth Material']} geometry={nodes.Sphere.geometry} scale={[2, 2, 2]} />
+            <mesh material={materials['Earth Material']} geometry={nodes.Sphere.geometry} scale={[2.5, 2.5, 2.5]} />
         </group>
     )
 }

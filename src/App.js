@@ -31,10 +31,36 @@ function App(props) {
           {/* <Stars /> */}
 
           <Suspense fallback={null} >
-            {/* <Earth position={[0, 0, 0]} name="Earth" /> */}
-            <Circles />
+            <Earth position={[0, 0, 0]} name="Earth" />
+            
             {/* <Basic /> */}
-            <Sat />
+
+            <Circles quaternion={[0.11827949918886817, -0.8728936763273911, -0.26179762468552814, 0.3943711368854184]}/>
+            <Sat quaternion={[0.11827949918886817, -0.8728936763273911, -0.26179762468552814, 0.3943711368854184]}/>
+
+
+            {/* <Circles quaternion={[0.01, 0.1, 0.03, 1]}/>
+            <Sat quaternion={[0.01, 0.1, 0.03, 1]}/>
+            <Circles quaternion={[0.11, 0.1, 0.03, 1]}/>
+            <Sat quaternion={[0.11, 0.1, 0.03, 1]}/>
+            <Circles quaternion={[0.21, 0.1, 0.03, 0.3943711368854184]}/>
+            <Sat quaternion={[0.21, 0.1, 0.03, 0.3943711368854184]}/>
+            <Circles quaternion={[0.31, 0.1, 0.03, 1]}/>
+            <Sat quaternion={[0.31, 0.1, 0.03, 1]}/>
+            <Circles quaternion={[0.41, 0.1, 0.03, 1]}/>
+            <Sat quaternion={[0.41, 0.1, 0.03, 1]}/>
+            <Circles quaternion={[0.51, 0.1, 0.03, 1]}/>
+            <Sat quaternion={[0.51, 0.1, 0.03, 1]}/>
+
+            <Circles quaternion={[-0.1, 0, 0, 1]}/>
+            <Sat quaternion={[-0.1, 0, 0, 1]}/>
+            <Circles quaternion={[-0.2, 0, 0, 1]}/>
+            <Sat quaternion={[-0.2, 0, 0, 1]}/>
+            <Circles quaternion={[-0.3, 0, 0, 1]}/>
+            <Sat quaternion={[-0.3, 0, 0, 1]}/>
+            <Circles quaternion={[-0.4, 0, 0, 1]}/>
+            <Sat quaternion={[-0.4, 0, 0, 1]}/> */}
+            
             {/* <Sat position={[0, 0, 0]} quaternion={[0.11827949918886817, -0.8728936763273911, -0.26179762468552814, 0.3943711368854184]} 
  scenePosition={[70, 0, 0]} name="Sat1" /> */}
             {/* <Sat position={[0, 0, 0]} quaternion={[0.7, 0, 0, 0.5]} scenePosition={[70, 0, 15]} name="Sat2" />
