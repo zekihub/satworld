@@ -12,13 +12,13 @@ export default function Sat(props) {
 
    const scn = useRef()
   useFrame((state, delta) => {
-    group.current.rotation.y += 0.004
+    group.current.rotation.z += 0.021
   })
   console.log("groupRef.current on sat:", group.current)
   console.log("scneeeeee:", scn)
   return (
-    <group ref={group} {...props} dispose={null} scale={[0.03, 0.03, 0.03]} /* quaternion={[0.7, 0, 0, 0.5]} */ quaternion={props.quaternion}>
-      <scene ref={scn} name="Scene" /* position={[70, 0, 0]} */ position={props.scenePosition} rotation={[10, 10, 90]}>
+    <group ref={group} {...props} dispose={null} quaternion={[0.11827949918886817, -0.8728936763273911, -0.26179762468552814, 0.3943711368854184]}>
+      <group ref={scn} name="Scene" scale={[0.1, 0.1, 0.1]} position={[0, 3, 0]} rotation={[10, 10, 90]}>
  
         <mesh material={materials.Material} geometry={nodes.Cube.geometry} position={[0.05, -0.01, -0.03]} />
         <mesh material={materials['Material.025']} geometry={nodes.Cylinder.geometry} position={[0.05, -0.61, -0.01]} />
@@ -156,7 +156,7 @@ export default function Sat(props) {
           position={[0.03, 0.99, -0.02]}
           scale={[0.59, 0.24, 0.59]}
         />
-      </scene>
+      </group>
     </group>
   )
 }
